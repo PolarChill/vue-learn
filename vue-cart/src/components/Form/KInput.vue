@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" :value="inputValue" @input="handleInput">
+    <input :type="type" :value="inputValue" @input="handleInput" @blur="handleBlur">
   </div>
 </template>
 <script>
@@ -10,6 +10,10 @@ export default {
     value: {
       type: String,
       default: ""
+    },
+    type:{
+      type:String,
+      default:'text',
     }
   },
   data() {
@@ -23,6 +27,11 @@ export default {
       this.inputValue = event.target.value;
       // 通知父组件更新值
       this.$emit('input', this.inputValue)
+      // 通知formItem做校验
+      // this.$parent.$emit('validate', this.inputValue)
+    },
+    handleBlur(event) {
+      this.$parent.$emit('validate' , this.inputValue)
     }
   }
 };

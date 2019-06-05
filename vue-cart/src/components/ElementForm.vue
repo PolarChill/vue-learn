@@ -33,13 +33,14 @@ export default {
   },
   methods: {
     // eleForm
-    submitForm(eleForm) {
+    submitForm() {
       // 拿实例
       this.$refs.LoginForm.validate(valid => {
         if (valid) {
           alert("表单提交成功");
         } else {
-          console.log("表单提交失败");
+          // console.log("表单提交失败");
+          alert('校验失败')
           return false;
         }
       });

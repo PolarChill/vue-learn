@@ -1,6 +1,7 @@
  <template>
   <div id="app">
     <!-- elementUI -->
+
     <h6 style="text-align:center">elementUI FormItem</h6>
     <element-form/>
     <hr>
@@ -78,6 +79,11 @@ export default {
       console.log(error);
     }
 
+    // 测试自己派发, 自己监听
+    this.$on("myself", msg => {
+      alert(`我自己和自己说话:${msg}`);
+    });
+
     // 旧写法
     // axios
     //   .get("/api/goods")
@@ -90,14 +96,6 @@ export default {
   },
   // 增加应该在cart中维护, cart拥有该字段, 通知
   methods: {
-    // eleForm
-    submitForm() {
-      if (true) {
-        alert("表单提交成功");
-      } else {
-        console.log(errors);
-      }
-    },
     // cart
     addGood(index) {
       const good = this.goods[index];
@@ -110,6 +108,7 @@ export default {
     },
 
     addNewGood() {
+      this.$emit("myself", "添加商品");
       this.goods.push({
         name: this.text,
         price: this.price,
