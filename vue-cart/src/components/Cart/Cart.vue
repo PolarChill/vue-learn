@@ -90,7 +90,7 @@ export default {
     // 监听cart  浅
     cart: function() {
       this.setLocal();
-    },
+    }
     // 深
     // cart:{
     //     hanalde(n, o) {

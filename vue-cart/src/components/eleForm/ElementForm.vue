@@ -39,8 +39,8 @@ export default {
         if (valid) {
           alert("表单提交成功");
         } else {
-          // console.log("表单提交失败");
-          alert('校验失败')
+          console.log("表单提交失败");
+          // alert('校验失败')
           return false;
         }
       });

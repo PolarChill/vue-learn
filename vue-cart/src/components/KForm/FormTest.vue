@@ -7,7 +7,6 @@
       <k-form-item lable="密码" prop="pwd">
         <k-input v-model="kForm.pwd" type="password"></k-input>
       </k-form-item>
-
       <k-form-item>
         <el-button type="primary" @click="submitForm2('eleForm')">提交</el-button>
       </k-form-item>
@@ -48,7 +47,8 @@ export default {
         if (valid) {
           alert("表单提交成功");
         } else {
-          alert("校验失败");
+          // alert("校验失败");
+          console.log("校验失败");
           return false;
         }
       });
