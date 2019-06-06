@@ -28,3 +28,6 @@ form在创建时, 监听validate, 将所有的派发事件放到一个数组时(
 
 
 
+### 路由
+1.  $router为VueRouter实例，主要是实现路由跳转使用。想要导航到不同URL，则使用router.push方法，
+2.  $route 路由信息对象，表示当前激活的路由的状态信息，包含了完整路径、当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）
