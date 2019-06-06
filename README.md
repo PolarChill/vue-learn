@@ -1,4 +1,6 @@
 #### VUE学习
+
+问题? watch  computed
 设计表单组件   
 三层 
 
@@ -31,3 +33,50 @@ form在创建时, 监听validate, 将所有的派发事件放到一个数组时(
 ### 路由
 1.  $router为VueRouter实例，主要是实现路由跳转使用。想要导航到不同URL，则使用router.push方法，
 2.  $route 路由信息对象，表示当前激活的路由的状态信息，包含了完整路径、当前 URL 解析得到的信息，还有 URL 匹配到的 route records（路由记录）
+
+1. 配置路由
+2. 安放路由出口
+3. 导航链接
+4. 传参
+   - 获取
+5. 嵌套
+6. 异步路由
+7. 守卫
+
+
+## vuex
+1. 配置
+
+   ```
+   {
+   	state:{}
+   	mutations:{}
+   	getters:{}
+   	actions:{}
+   }
+   ```
+
+2. 使用
+
+   - store.state.xx
+   - store.getters.xx
+   - store.commit(xxx)
+   - store.dispatch(xxx)
+
+3. 帮助方法
+
+   - mapState
+   - mapGetters
+   - mapMutations
+   - mapActions
+
+4. 模块化
+
+
+
+
+
+
+
+
+

@@ -23,9 +23,18 @@ const routers =  new Router({
       path: '/home',
       component: Home,
       props:true,
-      redirect:`/home/mall`,
+      redirect:`/home/vuexlearn`,
       name:'home',
       children: [
+        {
+          path: 'vuexlearn/:user?',
+          name: 'vuex-learn',
+          props: true,
+          // route level code-splitting  懒加载
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "mall" */ '@/components/vuex/index.vue')
+        },
         {
           path: 'mall/:user?',
           name: 'mall',

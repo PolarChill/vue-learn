@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <HelloWorld :msg="msg"/>
     <div>
+      <router-link :to="{name: 'vuex-learn'}">vuex-learn</router-link> |
       <router-link :to="{name: 'mall'}">Mall</router-link> |
       <router-link :to="{name: 'kform'}">KForm</router-link> |
       <router-link :to="{name: 'eleform'}">EleForm</router-link> |
