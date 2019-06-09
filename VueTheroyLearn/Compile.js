@@ -105,7 +105,9 @@ class Compile {
     let updaterFn = this[dir + 'Updater'];
     // 执行更新, 调用了get函数
     updaterFn && updaterFn(node, vm[exp]);
-    // 同时创建监听器
+    // 同时创建监听器  
+    // 巧妙之处, 如果将订阅添加到该属性的依赖关系中, 通过访问该属性的get属性, 然后将watch加入, 
+    // 但是去哪加watch呢, 就需要给watcher临时添加到Dep的原型上, 添加完毕后将Dep原型上的该属性置为null
     new Watcher(vm, exp, function(value) {
       updaterFn && updaterFn(node, value);
     });

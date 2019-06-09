@@ -101,8 +101,9 @@ class Watcher {
     this.cb = cb;
     this.vm = vm;
     this.key = key;
-    Dep.target = this; // ????
+    Dep.target = this; // 劫持属性的时候, 为每个属性创建了一个依赖数组
     this.vm[this.key]; // 触发get 将watcher添加到deps
+    // get中会执行dep.add(Drop.target) 执行完毕后需将 该依赖重置
     Dep.target = null;
   }
   update() {
