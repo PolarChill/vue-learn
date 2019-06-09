@@ -1,4 +1,5 @@
 #### VUE学习
+![VUE底层原理关系图](VueTheroyLearn/vue.png?raw=true)
 
 问题? watch  computed
 设计表单组件   
@@ -73,7 +74,7 @@ form在创建时, 监听validate, 将所有的派发事件放到一个数组时(
 4. 模块化
 
 
-
+[][]
 
 
 
